@@ -5114,7 +5114,7 @@ background-color: #5ca9fc;
 cursor: pointer;
 }
 .item-practice p:active{
-  color:pink;
+  color:rgb(212, 28, 59);
 }
 
 

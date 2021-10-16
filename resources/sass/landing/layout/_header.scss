@@ -1,0 +1,297 @@
+@import "../utils/variables";
+/*Section HEADER*/
+.Header {
+    background-color:rgba(59, 59, 59, 0.568);
+    border-radius: 0px 0px 20px 20px;
+  
+    color: white;
+    display: grid;
+    grid-template-columns: 0.6fr 1.3fr;
+    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 12px;
+    grid-auto-flow: column dense;
+    grid-template-areas:
+      "Slogan AnimatedMenu";
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    padding:2rem 0;
+    position:fixed;
+    width: 100%;
+    top:0;
+    z-index: 7;
+    animation: fadeInUp;
+    animation-duration: 3s;
+  }
+  
+  .AnimatedMenu {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: column dense;
+    align-content: center;
+    align-items: center;
+    grid-template-areas:
+      ".";
+    align-self: center;
+    grid-area: AnimatedMenu;
+    width: 98%;
+  }
+  
+  .Slogan { 
+    font-family:Ephesis-Regular!important;
+    font-size:3em;
+    font-weight: bold;
+    grid-area: Slogan;
+    justify-self: center;
+    align-self: center;
+   }
+  
+     
+  
+  
+  /*SECCION MENUS CABECERA*/
+  @media only screen and (max-width:1499px){
+    .menu-2 {
+      text-transform: uppercase;
+      color: white;
+      font-family: LibreBaskerville-Regular;
+      padding-left: 60% !important;
+      text-align:center;
+    }
+    
+    .menu-2 h1 {
+      padding: 30px;
+      text-align: center;
+      font-size: 1.5em;
+    }
+    .menu-2 li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+    }
+    .menu-2 li{
+      border-bottom: 2px solid rgb(255, 255, 255);
+      margin: 20px 50px 20px;
+    }
+    .menu-2 nav {
+      width: 300px;
+      background: #ffffff00;
+    }
+    .menu-2 span {
+      width: 300px;
+      padding : 30px ;
+      background : #2d2f3100; 
+      color : white;
+      font-size : 1.2em;
+      font-variant : small-caps;
+      cursor : pointer;
+      display: block;
+      
+    }
+    .menu-2 span::after { 
+      float: right;
+      font-weight: bold;
+      right: 10%;
+      content: "+";
+    }
+    .menu-2 .slide {
+    padding:0px 0px 0px 0px!important;
+    clear:both;
+    width:100%;
+    height:0px;
+    overflow: hidden;
+    text-align: center;
+    transition: height .4s ease;
+    }
+    .menu-2 .slide li {
+      padding: 10px 10px 10px 10px;
+      list-style:none;
+    }
+    .menu-2 label{
+      margin:0 !important;
+    }
+    .menu-2 #touch {
+      position: absolute;
+      opacity: 0;
+      height: 0px!important;
+      
+    }
+    
+    .menu-2 #touch:checked + .slide {
+      height: 300px!important;
+    }
+  
+  }
+  @media only screen and (min-width:1500px){
+    .menu-1 {
+      text-transform: uppercase;
+      color: rgb(255, 255, 255);
+      display: inline-block;
+      cursor: pointer;
+      pointer-events: none;
+      position: absolute;
+      top:10px;
+      font-family: LibreBaskerville-Regular;
+    }
+    .menu-1:hover {
+      pointer-events: all;
+    }
+    .menu-1 .label {
+      display: inline-block;
+      cursor: pointer;
+      pointer-events: all;
+    }
+    .menu-1 .spacer {
+      display: inline-block;
+      width: 80px;
+      margin-left: 10px;
+      margin-right: 15px;
+      vertical-align: middle;
+      cursor: pointer;
+      position: relative;
+    }
+    .menu-1 .spacer:before {
+      content: "";
+      position: absolute;
+      border-bottom: 1px solid #ffffff;
+      height: 1px;
+      width: 0%;
+      transition: width 0.25s ease;
+      transition-delay: 0.7s;
+    }
+    .menu-1 .item {
+      padding: 1rem 1rem;
+      position: relative;
+      display: inline-block;
+      margin-right: 10px;
+      opacity: 0;
+      transition: opacity 0.5s ease, top 0.5s ease;
+      transition-delay: 0;
+    }
+    .menu-1 span {
+      transition: color 0.5s ease;
+    }
+    
+    /*animaciones*/
+    
+    .menu-1 i {
+      font-size: 30px;
+    }
+    .menu-1 a {
+      position: relative;
+      display: block;
+      overflow: hidden;
+    }
+    
+    .menu-1 a span {
+      transition: transform 0.2s ease-out;
+    }
+    
+    .menu-1 a span:first-child {
+      display: inline-block;
+      padding: 10px;
+      color:white;
+      
+    }
+    .menu-1 .item:hover span:last-child {
+      transform: translateY(-25%);
+      color: #cc1341;
+    }
+    .menu-1 .item:hover span:first-child {
+      transform: translateY(100%);
+      
+    }
+    
+    .menu-1 a span:last-child {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(110%);
+      color: white;
+    }
+    
+    /*end animaciones*/
+    
+    .menu-1:hover .spacer:before {
+      width: 100%;
+      transition-delay: 0s;
+    }
+    .menu-1:hover .item {
+      opacity: 1;
+      top: 0px;
+    }
+    .menu-1 .item:nth-child(1) {
+      transition-delay: 0.45s;
+    }
+    .menu-1 .item:nth-child(2) {
+      transition-delay: 0.4s;
+    }
+    .menu-1 .item:nth-child(3) {
+      transition-delay: 0.35s;
+    }
+    .menu-1 .item:nth-child(4) {
+      transition-delay: 0.3s;
+    }
+    .menu-1 .item:nth-child(5) {
+      transition-delay: 0.25s;
+    }
+    .menu-1 .item:nth-child(6) {
+      transition-delay: 0.2s;
+    }
+    .menu-1 .item:nth-child(7) {
+      transition-delay: 0.15s;
+    }
+    .menu-1 .item:nth-child(8) {
+      transition-delay: 0.1s;
+    }
+    .menu-1 .item:nth-child(9) {
+      transition-delay: 0.05s;
+    }
+    .menu-1 .item:nth-child(10) {
+      transition-delay: 0s;
+    }
+    .menu-1:hover .item:nth-child(1) {
+      transition-delay: 0.25s;
+    }
+    .menu-1:hover .item:nth-child(2) {
+      transition-delay: 0.3s;
+    }
+    .menu-1:hover .item:nth-child(3) {
+      transition-delay: 0.35s;
+    }
+    .menu-1:hover .item:nth-child(4) {
+      transition-delay: 0.4s;
+    }
+    .menu-1:hover .item:nth-child(5) {
+      transition-delay: 0.45s;
+    }
+    .menu-1:hover .item:nth-child(6) {
+      transition-delay: 0.5s;
+    }
+    .menu-1:hover .item:nth-child(7) {
+      transition-delay: 0.55s;
+    }
+    .menu-1:hover .item:nth-child(8) {
+      transition-delay: 0.6s;
+    }
+    .menu-1:hover .item:nth-child(9) {
+      transition-delay: 0.65s;
+    }
+    .menu-1:hover .item:nth-child(10) {
+      transition-delay: 0.7s;
+    }
+    
+  
+  }
+  
+  
+  /*END SECTION MENU*/
+    

@@ -1,0 +1,19 @@
+@import "../utils/variables";
+main #upperScroll{
+   
+    color:$vinotinto;
+    font-size: 8em;
+    right:10px;
+    bottom: 10px;
+  
+    position:fixed !important;
+    margin-top: 5px;
+    outline:none;
+    cursor: pointer !important;
+  }
+  main #upperScroll:active{
+    color:$mantequilla;
+  }
+  main #upperArrow{
+    position: absolute;
+  }

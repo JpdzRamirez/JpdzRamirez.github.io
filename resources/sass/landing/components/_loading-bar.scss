@@ -1,0 +1,35 @@
+@import "../utils/variables";
+.ldBar {
+    position: relative;
+    color: $azul-neon;
+    font-family: "varela round";
+    font-size: 2.5em;
+    font-weight: bold;
+    width: auto;
+    height: auto;
+    margin-top:20%;
+}
+.ldBar.label-center  .ldBar-label {
+    position: absolute;
+    text-shadow: 0 0 3px $rosa-neon;
+}
+.ldBar-label:after {
+    content: "%";
+    display: inline;
+}
+.ldBar.no-percent .ldBar-label:after {
+    content: "";
+}
+.imgLoading{
+    position: absolute;
+
+}
+.containerLoading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+  

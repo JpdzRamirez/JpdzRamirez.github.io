@@ -1,0 +1,109 @@
+@import "../utils/variables";
+/*Section FOOTER*/
+
+.Footer {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Logo AboutUs GoogleApi";
+      justify-content: stretch; 
+      align-content: stretch; 
+      justify-items: center;  
+      align-items: center;  
+      justify-self: stretch; 
+  
+    padding:2rem 0;
+    bottom: 0;
+    background-color:$vinotinto-trans;
+    border-radius: 20px 20px 0px 0px;
+    color: $blancotexto;
+    hr {
+      border-color: #eeeeee;
+      margin: 20px 0;
+    }
+    ul {
+      list-style: none;
+    }
+   
+  }
+  .logoFooter { 
+    width: 95%;
+  
+    justify-content: center; 
+    justify-items: stretch;  
+    align-items: center;   
+    align-content: stretch; 
+    grid-area: Logo; 
+  
+  }
+  .logoFooter img{
+    width:250px;
+    height:240px;
+    margin: 2em 30%;
+  }
+  .AboutUs { 
+    justify-self: center; 
+    align-self: center; 
+    text-align: center; 
+    align-content: center;
+    grid-area: AboutUs; 
+    width: 95%;
+    font-family: LibreBaskerville-Regular;
+  }
+  .AboutUs a {
+  
+    text-decoration: none!important;
+   
+  }
+  .AboutUs a h4{
+    color: $blancotexto;
+    text-decoration: none!important;
+    font-family: Ephesis-Regular;
+    font-size: 3em !important;
+    font-weight: bold;
+  }
+  .AboutUs #copyright{
+    padding-top:5em;
+  }
+  .GoogleApi {
+    justify-self: center; 
+    align-self: center; 
+    width: 95%;
+  
+   
+     grid-area: GoogleApi; 
+    }
+  .GoogleApi .mappingTitle{
+    font-family: Ephesis-Regular;
+    font-size: 2em;
+    font-weight: bold;
+    text-align:center;
+  }
+  .mapouter {
+    position: static;
+    display: grid;
+    align-content: stretch;
+    justify-content: stretch;
+    align-items: center;
+    justify-items: stretch;
+    min-width: 450px;
+    max-width: 550px;
+    margin: 2px 1em 2px auto;
+    padding: 1rem ;
+  }
+  
+  #gmap_canvas {
+    align-self: center;
+    overflow: hidden;
+    background: none !important;
+    border: 5px solid $blancotexto; 
+    border-radius: 15px 15px 15px 15px;
+    min-width: 350px;
+    max-width:1000px;
+    height: 95%;
+    
+  }

@@ -1,0 +1,30 @@
+
+@import "../landing/base/reset";
+
+@import "../landing/components/animate";
+@import "../landing/components/buttons";
+@import "../landing/components/loading-bar";
+@import "../landing/components/pagination";
+
+@import "../landing/layout/header";
+@import "../landing/layout/footer";
+@import "../landing/layout/grid";
+
+@import "../landing/pages/shop";
+
+@import "../landing/utils/variables";
+
+
+@import "../landing/vendors/bootstrap";
+
+@import url('../fonts/Ephesis-Regular.ttf');
+@import url('../fonts/LibreBaskerville-Regular.ttf');
+@font-face {
+    font-family: "Ephesis-Regular";
+    src: URL("../fonts/Ephesis-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "LibreBaskerville-Regular";
+    src: URL("../fonts/LibreBaskerville-Regular.ttf") format("truetype");
+}
+

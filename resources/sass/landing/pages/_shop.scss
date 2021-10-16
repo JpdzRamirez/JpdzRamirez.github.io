@@ -1,0 +1,103 @@
+*{margin: 0; padding: 0;}
+body{  
+      margin:0;
+      scroll-behavior:smooth !important ;
+      font-family:LibreBaskerville-Regular!important;
+      min-width: 1200px;
+  }
+  main #background{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  //section title slogan
+  .container-header{
+    margin-top: 230px;
+  }
+  .heading  {
+    color: white !important;
+    font-size: 3em;
+    text-align: center;
+    max-width: 500px;
+    margin: 20px auto;
+  }
+  .heading-paragraph{
+    color: white !important;
+    font-size: 1.5em;
+    text-align: center;
+    max-width: 500px;
+    margin: 20px auto;
+  }
+  
+ 
+//Section content menú
+  .container-section{
+    margin-top: 230px;
+  }  
+
+  .article-loop {
+    width: 100%;
+    margin: 0px auto; 
+    color: white !important;
+    border: 10px solid #760622;
+  }
+          
+  .img-container {
+    height:0px;
+    width:100%;
+    padding-top:56.25%; /* Relación: 16/9 = 56.25% */
+    position:relative; 
+  }
+  .img-container img {
+    height:100%;
+    width:100%;
+    top:0px;
+    left:0px;
+    min-width: 10vw ;
+
+  display: block;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+  
+  }
+
+  
+  /* Just styling the content of the div, the *magic* in the previous rules */
+  .img-container .caption {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  
+  }
+
+
+  .container-practice{
+    border: 1px solid blue;
+    
+    display:flex;
+    flex-direction:;
+    flex-flow: row wrap;
+    width:100%;
+    align-content: space-between;
+    align-items: center;
+    justify-content:space-between;
+  }
+  .container-practice .item-practice{
+    border: 1px solid pink;
+    height: 50px;
+    background-image: url;
+  }
+  .container-practice .item-practice:hover{
+    -webkit-box-shadow: 5px 5px 15px 5px #6d6d6d; 
+  box-shadow: 5px 5px 15px 5px #4d4d4d;
+  background-color: #5ca9fc;
+  cursor: pointer;
+  transform:scale(0.5)
+  }
